@@ -1,3 +1,9 @@
 UVA/10180.exe
 UVA/10180.o
 *.exe
+*.o
+*.txt
+SPOJ/ALIENS.cpp
+SPOJ/WPUZZLES.cpp
+UVA/522.cpp
+UVA/test.cpp

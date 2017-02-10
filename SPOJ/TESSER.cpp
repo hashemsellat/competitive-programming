@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 int a[1000000];
+#define endl '\n'
 main(){
+    ios_base::sync_with_stdio(false);
     int t;
     cin>>t;
     while(t--){

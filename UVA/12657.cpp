@@ -17,7 +17,7 @@ node *a[1000000];
 main(){
     int n,m;
     int cnter=1;
-    freopen("out.txt","w",stdout);
+  //  freopen("out.txt","w",stdout);
     while(cin>>n>>m){
         for(int i=0;i<=n+1;i++)
             a[i]=new node(i);

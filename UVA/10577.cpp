@@ -87,9 +87,9 @@ main()
                 ret=point(curx,curx*mm+cc);
             }
         }
-        cout<<fixed<<setprecision(3)<<ret.X<<" "<<ret.Y<<endl;
+        //   cout<<fixed<<setprecision(3)<<ret.X<<" "<<ret.Y<<endl;
         double tmp=2*abs(ret-B);
-        cout<<tmp*tmp<<endl;
+        //  cout<<tmp*tmp<<endl;
         point cur(A.X-ret.X,A.Y-ret.Y);
         double teta=(2*PI)/(n);
         double mnx=cur.X,mny=cur.Y,mxx=cur.X,mxy=cur.Y;

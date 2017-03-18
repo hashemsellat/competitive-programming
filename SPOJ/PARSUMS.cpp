@@ -1,7 +1,7 @@
 /*
     to solve this problem lets first double the orginal array (put another array similar to (a) beside (a) ) so we get (aa)
-    now we get every possible cyclic shift (any n consecutive elements represents a cyclic shift).
-    we make a perfix sum array (s) and sort its elements in decreasing order.
+    now we get every possible cyclic shift (any n consecutive elements represent a cyclic shift).
+    we make a perfix sum array (s) and sort its elements by decreasing order.
     now we perform the cyclic shift from 0 to n-1 .. each time we remove the first element and add it to the end,
     when we remove the first element we check if the smallest element in the prefix sum minus the sum of all the removed elements if it's >=0 so it's a valid cyclic shift.
 */

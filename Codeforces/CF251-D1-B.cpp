@@ -48,7 +48,7 @@ main(){
   }
   vector<int> cur=v,prv=v;
   if(s==v){
-    cout<<"NO"<<endl;ييي
+    cout<<"NO"<<endl;
     return 0;
   }
 //  cur=forward(cur);

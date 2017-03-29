@@ -1,3 +1,4 @@
+//sorry for the poor english
 /* in this game problem we have 2 players and each of them should maximize the sum of values he takes.
 they both play the same way*/
 
@@ -18,8 +19,8 @@ main()
     for(int i=0; i<n; i++)
         // c[i]=1e5;
        scanf("%d",&c[i]);
-    /*let dp[turn][prv][i] be the maximum player #turn can obtain if he started at coin #i and the previous player took
-prv coins, Here bottom-up dp is faster than top-down and there is no need for additional arrays*/
+    /*let dp[turn][prv][i] be the maximum sum of coins player #turn can obtain if he started at coin #i and the previous player took
+prv coins, In this problem bottom-up dp is faster than top-down and there is no need for additional arrays*/
 
   //loop over start positions
     for(int i=n-1; i>=0; i--)
@@ -39,7 +40,7 @@ prv coins, Here bottom-up dp is faster than top-down and there is no need for ad
                   //at each step we try to take one more coin
                     ii nxt=dp[turn^1][j+1][i+j+1];
                     sm+=c[i+j];
-                    /* the first player will try to maximize the first element in the pair while the second player
+                    /* the first player will try to maximize the first element of the pair while the second player
                     will try to maximize the second element */
                     if(turn==0)
                         nxt.first+=sm;

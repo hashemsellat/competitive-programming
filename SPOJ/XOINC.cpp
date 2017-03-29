@@ -1,3 +1,6 @@
+/* in this game problem we have 2 players and each of them should maximize the sum of values he takes.
+they both play the same way*/
+
 #include<bits/stdc++.h>
 #define ii pair<int,int>
 #define endl '\n'
@@ -11,12 +14,17 @@ main()
 {
     // ios_base::sync_with_stdio(false);
     scanf("%d",&n);
-     // n=2000;
+    // n=2000;
     for(int i=0; i<n; i++)
         // c[i]=1e5;
        scanf("%d",&c[i]);
+    /*let dp[turn][prv][i] be the maximum player #turn can obtain if he started at coin #i and the previous player took
+prv coins, Here bottom-up dp is faster than top-down and there is no need for additional arrays*/
+
+  //loop over start positions
     for(int i=n-1; i>=0; i--)
     {
+        //2 players
         for(int turn=0; turn<2; turn++)
         {
             int sm=0,j=0;
@@ -25,10 +33,14 @@ main()
             {
                 if(prv>(i+1))
                     break;
+                // here j+1 is the number of coins player #turn will take, it ranges from 1 to 2*prv
                 for(j; j<max(2*prv,1)&&i+j<n; j++)
                 {
+                  //at each step we try to take one more coin
                     ii nxt=dp[turn^1][j+1][i+j+1];
                     sm+=c[i+j];
+                    /* the first player will try to maximize the first element in the pair while the second player
+                    will try to maximize the second element */
                     if(turn==0)
                         nxt.first+=sm;
                     else

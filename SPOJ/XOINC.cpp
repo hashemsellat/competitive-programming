@@ -15,9 +15,7 @@ main()
 {
     // ios_base::sync_with_stdio(false);
     scanf("%d",&n);
-    // n=2000;
     for(int i=0; i<n; i++)
-        // c[i]=1e5;
        scanf("%d",&c[i]);
     /*let dp[turn][prv][i] be the maximum sum of coins player #turn can obtain if he started at coin #i and the previous player took
 prv coins, In this problem bottom-up dp is faster than top-down and there is no need for additional arrays*/
@@ -59,6 +57,5 @@ prv coins, In this problem bottom-up dp is faster than top-down and there is no 
             }
         }
     }
-    // ii ans=f(0,0,0);
     printf("%d\n",dp[0][1][0].first);
 }

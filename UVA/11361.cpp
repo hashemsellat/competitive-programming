@@ -1,3 +1,10 @@
+/*
+ let valid number be the number which is divisable by K and it's sum of digits is also divisable by K
+ let S(x) be the number of valid numbers below x
+ then answer is obviously S(B)-S(A)+(isValid(A))
+ dp[i][mod][sm][isLess] is the number of valid numbers we can get if we are at digit #i
+, the sum of previous digits is sm ,mod=(the previous digits*10^(the number of the rest digits))%K and isLess is 1 if we go below the number
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
